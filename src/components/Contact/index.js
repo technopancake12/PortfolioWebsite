@@ -1,12 +1,14 @@
-import { send } from '@emailjs/browser'
+import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useEffect } from 'react'
 
 const Contact = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate')
+
+    const form = useRef()
 
     useEffect(() => {
         setTimeout(() => {
@@ -14,6 +16,27 @@ const Contact = () => {
         }, 3000)
     })
 
+    const sendEmail = (e) => {
+        e.preventDefault()
+
+        emailjs
+            .sendForm(
+                'service_8go030z',
+                'template_2zh86vc',
+                form.current,
+                'EMtmZHb_9o3B4ewWh'
+            )
+            .then(
+                () => {
+                    alert('Message Successfully Sent!')
+                    window.location.reload(false)
+                },
+                () => {
+                    alert('Failed to send message, please try again')
+                }
+            )
+    }
+ 
     return (
         <>
             <div className='contact-page'>
@@ -28,7 +51,7 @@ const Contact = () => {
                         I am interested in being a web developer.
                     </p>
                     <div className='contact-form'>
-                        <form>
+                        <form ref={form} onSubmit={sendEmail}>
                             <ul>
                                 <li className='half'>
                                     <input type='text' name='name' placeholder='Name' />
