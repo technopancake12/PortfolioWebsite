@@ -18,7 +18,7 @@ const Contact = () => {
     })
 
     const sendEmail = (e) => {
-        e.preventDefault()
+        e.preventDefault();
 
         emailjs
             .sendForm(
@@ -58,7 +58,7 @@ const Contact = () => {
                                     <input type='text' name='name' placeholder='Name' />
                                 </li>
                                 <li className='half'>
-                                    <input type='email' name='email' placeholder='Email' />
+                                    <input type='email' name='from_email' placeholder='Email' />
                                 </li>
                                 <li>
                                     <input type='text' name='subject' placeholder='Subject' required/>
