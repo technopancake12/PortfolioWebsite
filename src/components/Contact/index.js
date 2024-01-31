@@ -4,6 +4,7 @@ import './index.scss'
 import { useRef, useState } from 'react'
 import { useEffect } from 'react'
 import Loader from 'react-loaders'
+import PhotoF from '../../../src/assets/images/photo-face.png'
 
 const Contact = () => {
 
@@ -49,7 +50,8 @@ const Contact = () => {
                         idx={15}/>
                     </h1>
                     <p>
-                        I am interested in being a web developer.
+                        I am looking for internships and jobs related to Data analyst, Data management, Web Developing, and Cyber Security.
+                        
                     </p>
                     <div className='contact-form'>
                         <form ref={form} onSubmit={sendEmail} netlify>
@@ -73,6 +75,9 @@ const Contact = () => {
                         </form>
                     </div>
                 </div>
+            </div>
+            <div className='photo'>
+                <img className='photo-face' src={PhotoF} />
             </div>
             <Loader type='pacman'></Loader>
         </>

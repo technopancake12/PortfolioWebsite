@@ -7,6 +7,10 @@
     position: absolute;
     right: 0;
     overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 2s 0.5s;
+    animation-fill-mode: forwards;
+    clear: both;
   }
   
   .cubespinner {
