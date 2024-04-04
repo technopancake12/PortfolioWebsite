@@ -32,10 +32,6 @@ const About = () => {
                         In my sophmore year of High School I joined the Hidden Genius project where I learned Entrepenuership and Leadership skills as well as the basics of Python, HTML, CSS, SQL, Swift, and Ruby.
                         After 15 months of this program I was offered the opportunity to be an Educator to future generations of Geniuses and kids from the ages of 8-16.
                     </p>
-                    <p>
-                        
-                    </p>
-                    <p>I am very abmitious</p>
                 </div>
 
                 <div className='stage-cube-cont'>
