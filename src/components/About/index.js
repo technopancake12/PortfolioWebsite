@@ -28,9 +28,14 @@ const About = () => {
                             idx={15}/>
                     </h1>
                     <p>
-                        I am a student in the Computer Science undergraduate program at California State University, Long Beach. 
-                        In my sophmore year of High School I joined the Hidden Genius project where I learned Entrepenuership and Leadership skills as well as the basics of Python, HTML, CSS, SQL, Swift, and Ruby.
-                        After 15 months of this program I was offered the opportunity to be an Educator to future generations of Geniuses and kids from the ages of 8-16.
+
+I am a dedicated Computer Science undergraduate student at California State University, Long Beach, driven by a passion for technology and innovation. My journey into the world of computing began during my sophomore year of high school when I participated in the prestigious Hidden Genius project. This transformative experience not only equipped me with essential skills in entrepreneurship and leadership but also laid the foundation for my technical expertise.
+
+During my time with the Hidden Genius project, I immersed myself in various programming languages including Python, HTML, CSS, SQL, Swift, and Ruby. Through hands-on projects and mentorship, I honed my abilities in software development, web design, and database management. Beyond technical proficiency, the program instilled in me a profound understanding of teamwork, problem-solving, and effective communication.
+
+Recognizing my potential and dedication, I was offered the unique opportunity to serve as an Educator within the Hidden Genius community. In this role, I mentored and inspired future generations of innovators and leaders, ranging from ages 8 to 16. By sharing my knowledge and experiences, I empowered young minds to explore their creativity, develop critical thinking skills, and pursue their passions in technology.
+
+My journey from student to educator exemplifies my commitment to continuous learning, personal growth, and making a positive impact in the tech community. As I continue my academic and professional pursuits in Computer Science, I am excited to leverage my diverse experiences and skills to contribute meaningfully to the ever-evolving field of technology.
                     </p>
                 </div>
 
