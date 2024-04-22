@@ -50,7 +50,7 @@ const Contact = () => {
                         idx={15}/>
                     </h1>
                     <p>
-                        I am looking for internships and jobs related to Data analyst, Data management, Web Developing, and Cyber Security.
+                        I am interested and looking for internships and jobs related to Data analyst, Data management, Web Developing, and Cyber Security, but anything that can help me sharpen my programming skills would be great!
                         
                     </p>
                     <div className='contact-form'>

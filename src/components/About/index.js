@@ -31,7 +31,7 @@ const About = () => {
 
 I am a dedicated Computer Science undergraduate student at California State University, Long Beach, driven by a passion for technology and innovation. My journey into the world of computing began during my sophomore year of high school when I participated in the prestigious Hidden Genius project. This transformative experience not only equipped me with essential skills in entrepreneurship and leadership but also laid the foundation for my technical expertise.
 
-During my time with the Hidden Genius project, I immersed myself in various programming languages including Python, HTML, CSS, SQL, Swift, and Ruby. Through hands-on projects and mentorship, I honed my abilities in software development, web design, and database management. Beyond technical proficiency, the program instilled in me a profound understanding of teamwork, problem-solving, and effective communication.
+During my time with the Hidden Genius project, I immersed myself in various programming languages including Python, HTML, CSS, SQL, Swift, javascript, and C. Through hands-on projects and mentorship, I honed my abilities in software development, web design, and database management. Beyond technical proficiency, the program instilled in me a profound understanding of teamwork, problem-solving, and effective communication.
 
 Recognizing my potential and dedication, I was offered the unique opportunity to serve as an Educator within the Hidden Genius community. In this role, I mentored and inspired future generations of innovators and leaders, ranging from ages 8 to 16. By sharing my knowledge and experiences, I empowered young minds to explore their creativity, develop critical thinking skills, and pursue their passions in technology.
 
