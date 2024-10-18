@@ -1,0 +1,19 @@
+.designs-page {
+    padding: 20px;
+    h1 {
+        color: #fff;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    .screenshots {
+        display: flex;
+        flex-wrap: wrap;
+
+        img {
+            margin: 10px;
+            width: 200px; /* Adjust as needed */
+            height: auto;
+            border: 2px solid #ffd700; /* Optional styling */
+        }
+    }
+}
