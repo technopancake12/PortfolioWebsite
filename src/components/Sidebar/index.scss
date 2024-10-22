@@ -89,6 +89,16 @@
                 content: 'CONTACT';
             }
         }
+        a.designs-link {
+            &:after {
+                content: 'DESIGNS';
+            }
+        }
+        a.Portfolio-link {
+            &:after {
+                content: 'MY WORK';
+            }
+        }
 
         a.active {
             svg{

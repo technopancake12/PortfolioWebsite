@@ -39,7 +39,11 @@ const Home = () => {
                     idx={32}/>
                     </h1>
                     <h2>CSULB Computer Science Student / Frontend Developer / Data Analyst</h2>
-                    <Link to='/contact' className='flat-button'>CONTACT ME</Link>
+                    <div className="button-container">
+                        <Link to='/contact' className='flat-button'>CONTACT ME</Link>
+                        <Link to='/portfolio' className='flat-button'>MY PORTFOLIO</Link>
+                        <Link to='/designs' className='flat-button'>MY DESIGNS</Link>
+                    </div>
                 </div>
                 <Logo />
             </div>

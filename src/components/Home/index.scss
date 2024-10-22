@@ -58,6 +58,26 @@
         letter-spacing: 3px;
         animation: fadeIn 1s 1.8s backwards;
     }
+    
+    .button-container {
+        display: flex; // Use flexbox for alignment
+        flex-direction: column; // Stack buttons vertically
+        margin-top: 25px; // Space above the button group
+        gap: 15px; // Space between buttons
+    }
+    
+    .flat-button {
+        display: block; // Ensure the button takes the full width available
+        text-align: center; // Center the text within the button
+        transition: background-color 0.3s; // Smooth transition for background color
+    }
+    
+    // Additional hover effect for buttons
+    .flat-button:hover {
+        background: #ffd700;
+        color: #333;
+    }
+    
 
     .flat-button {
         color: #ffd700;
