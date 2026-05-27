@@ -46,7 +46,7 @@ const Contact = () => {
                             idx={15} />
                     </h1>
                     <p>
-                        I am interested and looking for internships and jobs related to Data analyst, Data management, Web Developing, and Cyber Security, but anything that can help me sharpen my programming skills would be great!
+                        I'm open to full-stack engineering roles, freelance projects, and collaborative opportunities — especially those at the intersection of technology and education or social impact. Feel free to reach out!
                     </p>
                     <div className='contact-form'>
                         <form ref={form} onSubmit={sendEmail} netlify>

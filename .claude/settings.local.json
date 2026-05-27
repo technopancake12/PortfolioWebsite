@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(pdf)",
+      "Skill(pdf:*)",
+      "Bash(python -c ' *)",
+      "Bash(pip install *)",
+      "Bash(npm start *)",
+      "Bash(timeout 20)",
+      "mcp__Claude_Preview__preview_start",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "mcp__Claude_in_Chrome__navigate",
+      "mcp__Claude_in_Chrome__computer",
+      "Bash(netstat -ano)",
+      "Bash(findstr \":300\")",
+      "Bash(tasklist /FI \"PID eq 33688\")",
+      "Bash(tasklist /FI \"PID eq 41500\")",
+      "PowerShell(Get-Process -Id 33688, 41500)",
+      "PowerShell(Get-NetTCPConnection -LocalPort 3000 | Select-Object LocalAddress, LocalPort, OwningProcess; Get-Process -Id \\(Get-NetTCPConnection -LocalPort 3000\\).OwningProcess | Select-Object Id, ProcessName)",
+      "PowerShell(Get-NetTCPConnection -State Listen | Where-Object { $_.LocalPort -in @\\(3000, 3001, 3002, 3003\\) } | Select-Object LocalPort, OwningProcess | Sort-Object LocalPort)",
+      "Bash(set PORT=3002)",
+      "Bash(ping -n 20 127.0.0.1)",
+      "PowerShell($env:PORT = \"3002\"; $env:BROWSER = \"none\"; Set-Location \"C:\\\\Users\\\\Ian Bundy-Weiss\\\\Documents\\\\Github\\\\PortfolioWebsite\"; Start-Process -FilePath \"npm\" -ArgumentList \"start\" -NoNewWindow -PassThru | Select-Object Id)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3002/)",
+      "WebFetch(domain:dribbble.com)",
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(ls -la \"/c/Users/Ian Bundy-Weiss/.claude/projects/C--Users-Ian-Bundy-Weiss-Documents-Github-PortfolioWebsite/7bd1c1c4-f9f1-4fe1-bf18-3c8255face75/tool-results/\")",
+      "mcp__Claude_in_Chrome__javascript_tool"
+    ]
+  }
+}

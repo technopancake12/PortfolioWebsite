@@ -1,13 +1,14 @@
-.designs-page { 
+.designs-page {
     width: 100%;
-    height: 100vh; // Full viewport height
-    overflow-y: auto; // Allow scrolling
-    position: relative; // Position relative for children
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    padding: 60px 60px 80px 120px;
+    box-sizing: border-box;
 
     .text-zone {
-        text-align: center; // Center the text
-        margin: 0 auto;
-        padding: 20px; // Padding for spacing
+        margin-bottom: 44px;
 
         h1 {
             font-size: 53px;
@@ -15,65 +16,151 @@
             color: #ffffff;
             font-weight: 400;
             margin-top: 0;
-            margin-bottom: 40px;
+            margin-bottom: 16px;
             position: relative;
-            
+
             &::before {
                 content: '<h1>';
                 font-family: 'La Belle Aurore';
-                color: #ffd700;
+                color: rgba(139, 92, 246, 0.55);
                 font-size: 18px;
                 position: absolute;
                 margin-top: -10px;
                 left: -10px;
-                opacity: 0.6;
             }
 
             &::after {
-                content: '<h1>';
+                content: '</h1>';
                 font-family: 'La Belle Aurore';
-                color: #ffd700;
+                color: rgba(139, 92, 246, 0.55);
                 font-size: 18px;
                 position: absolute;
                 left: -30px;
                 bottom: -20px;
-                margin-left: 20px; 
-                opacity: 0.6;
+                margin-left: 20px;
             }
+        }
+
+        .designs-intro {
+            color: rgba(255, 255, 255, 0.38);
+            font-family: sans-serif;
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin-top: 28px;
         }
     }
 
-    .screenshots {
+    .designs-grid {
         display: flex;
-        flex-direction: column; // Stack items vertically
+        flex-direction: column;
+        gap: 24px;
+    }
 
-        .screenshot-item {
-            display: flex; // Horizontal layout
-            align-items: center; // Center vertically
-            height: 100vh; // Each item takes full viewport height
-            padding: 100px; // Padding for each item
-            border: 1px solid #ffd700; // Optional border for each item
-            background-color: rgba(255, 255, 255, 0.1); // Optional background
+    .design-card {
+        display: flex;
+        align-items: stretch;
+        height: 340px;
+        background: rgba(255, 255, 255, 0.025);
+        border: 1px solid rgba(139, 92, 246, 0.18);
+        border-radius: 14px;
+        overflow: hidden;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+            border-color: rgba(139, 92, 246, 0.6);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+            transform: translateY(-4px);
+        }
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .design-media {
+            width: 52%;
+            flex-shrink: 0;
+            overflow: hidden;
+            position: relative;
+            /* dark bg so contained images look intentional */
+            background: #0A0A16;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             img {
-                height: 80%; // Adjust to fit in the box
-                object-fit: contain; // Show the whole image
-                width: 60%; // Adjust width as necessary
-                margin-right: 20px; // Space between image and text
+                width: 100%;
+                height: 100%;
+                /* show the full image, no cropping */
+                object-fit: contain;
+                object-position: center;
+                display: block;
+                transition: transform 0.5s ease;
+                padding: 8px;
+                box-sizing: border-box;
             }
 
-            .description-box {
-                flex: 1; // Take remaining space
-                h2 {
-                    color: #ffd700; // Title color
-                    margin: 0 0 10px; // Margin for title
-                    font-size: 40px;
+            &:hover img {
+                transform: scale(1.03);
+            }
+        }
+
+        .design-body {
+            flex: 1;
+            padding: 32px 36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+
+            .design-meta {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 14px;
+                flex-wrap: wrap;
+
+                .design-type {
+                    font-size: 10px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    color: rgba(139, 92, 246, 0.6);
+                    font-family: sans-serif;
                 }
-                p {
-                    color: #fff; // Description color
-                    margin: 0; // No margin for description
-                    font-size: 18px;
+
+                .design-tools {
+                    display: flex;
+                    gap: 6px;
+
+                    .tool-tag {
+                        background: rgba(139, 92, 246, 0.1);
+                        color: #A78BFA;
+                        border: 1px solid rgba(139, 92, 246, 0.25);
+                        padding: 2px 8px;
+                        border-radius: 4px;
+                        font-size: 11px;
+                        font-family: sans-serif;
+                    }
                 }
+            }
+
+            h2 {
+                font-family: 'Coolvetica';
+                color: #ffffff;
+                font-size: 26px;
+                font-weight: 400;
+                margin: 0 0 12px;
+            }
+
+            p {
+                color: rgba(255, 255, 255, 0.55);
+                font-family: sans-serif;
+                font-size: 13px;
+                line-height: 1.75;
+                margin: 0;
+                display: -webkit-box;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
             }
         }
     }

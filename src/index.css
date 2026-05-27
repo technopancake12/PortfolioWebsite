@@ -1,16 +1,19 @@
-html {
-  font-size: 62.5%;
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
-  margin: 0;
-  font: 300 11px/1.4 'Helevetica Neue', 'sans-serif';
-  color: #444;
-  background: #022c43;
-  overflow: hidden;
-  display: block;
+  background: #f4f1ea;
+  color: #1a1814;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; max-width: 100%; }
+::selection { background: #c97b4c; color: #f4f1ea; }

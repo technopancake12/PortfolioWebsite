@@ -5,7 +5,7 @@
         left: 10%;
         top: 50%;
         transform: translateY(-50%);
-        width: 40%;
+        width: 42%;
         max-height: 90%;
     }
 
@@ -19,27 +19,25 @@
         &::before {
             content: '<h1>';
             font-family: 'La Belle Aurore';
-            color: #ffd700;
+            color: rgba(139, 92, 246, 0.55);
             font-size: 18px;
             position: absolute;
             margin-top: -40px;
             left: 15px;
-            opacity: 0.6;
         }
 
         &::after {
-            content: '<h1>';
+            content: '</h1>';
             font-family: 'La Belle Aurore';
-            color: #ffd700;
+            color: rgba(139, 92, 246, 0.55);
             font-size: 18px;
             position: absolute;
             margin-top: 18px;
             margin-left: 20px;
-            animation: fadeIn 1s 1.7s backwards; 
-            opacity: 0.6;
+            animation: fadeIn 1s 1.7s backwards;
         }
 
-        img{
+        img {
             width: 32px;
             margin-left: 20px;
             opacity: 0;
@@ -50,53 +48,46 @@
     }
 
     h2 {
-        color: #8d8d8d;
+        color: rgba(255, 255, 255, 0.4);
         margin-top: 20px;
         font-weight: 400;
         font-size: 11px;
         font-family: sans-serif;
-        letter-spacing: 3px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
         animation: fadeIn 1s 1.8s backwards;
     }
-    
+
     .button-container {
-        display: flex; // Use flexbox for alignment
-        flex-direction: column; // Stack buttons vertically
-        margin-top: 25px; // Space above the button group
-        gap: 15px; // Space between buttons
+        display: flex;
+        flex-direction: column;
+        margin-top: 32px;
+        gap: 12px;
     }
-    
-    .flat-button {
-        display: block; // Ensure the button takes the full width available
-        text-align: center; // Center the text within the button
-        transition: background-color 0.3s; // Smooth transition for background color
-    }
-    
-    // Additional hover effect for buttons
-    .flat-button:hover {
-        background: #ffd700;
-        color: #333;
-    }
-    
 
     .flat-button {
-        color: #ffd700;
-        font-size: 13px;
-        font-weight: 400;
+        display: block;
+        text-align: center;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 600;
         letter-spacing: 4px;
         font-family: sans-serif;
         text-decoration: none;
-        padding: 10px 18px;
-        border: 1px solid #ffd700;
-        margin-top: 25px;
-        float: left;
+        padding: 12px 22px;
+        border: 1px solid rgba(139, 92, 246, 0.5);
+        background: rgba(139, 92, 246, 0.1);
+        border-radius: 6px;
+        margin-top: 0;
         animation: fadeIn 1s 1.8s backwards;
         white-space: nowrap;
+        transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 
         &:hover {
-            background: #ffd700;
-            color: #333;
+            background: #8B5CF6;
+            border-color: #8B5CF6;
+            box-shadow: 0 0 24px rgba(139, 92, 246, 0.4);
+            color: #fff;
         }
     }
-
 }

@@ -9,7 +9,7 @@ const Home = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate')
     const nameArray = [' ','I', 'a', 'n', ' ', 'B', 'u', 'n', 'd', 'y', '-', 'W', 'e', 'i', 's', 's',]
-    const jobArray=['y', 'o', 'u', 't', 'h', ' ', 'e', 'd', 'u', 'c', 'a', 't', 'o', 'r']
+    const jobArray=['s', 'o', 'f', 't', 'w', 'a', 'r', 'e', ' ', 'e', 'n', 'g', 'i', 'n', 'e', 'e', 'r']
 
     useEffect(() => {
         setTimeout(() => {
@@ -38,7 +38,7 @@ const Home = () => {
                     strArray={jobArray}
                     idx={32}/>
                     </h1>
-                    <h2>CSULB Computer Science Student / Frontend Developer / Data Analyst</h2>
+                    <h2>Innovation Educator · Full-Stack Developer · UI/UX Designer</h2>
                     <div className="button-container">
                         <Link to='/contact' className='flat-button'>CONTACT ME</Link>
                         <Link to='/portfolio' className='flat-button'>MY PORTFOLIO</Link>

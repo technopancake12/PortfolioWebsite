@@ -2,63 +2,101 @@ import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCss3, faGithub, faHtml5, faJava, faReact } from '@fortawesome/free-brands-svg-icons'
+import { faCss3, faGithub, faHtml5, faReact, faPython, faNodeJs, faAws } from '@fortawesome/free-brands-svg-icons'
 import Loader from 'react-loaders'
-import { faDatabase } from '@fortawesome/free-solid-svg-icons'
 
+const skillCategories = [
+    {
+        name: 'Frontend',
+        skills: ['React', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3 / SCSS']
+    },
+    {
+        name: 'Backend',
+        skills: ['Python', 'Flask', 'Django', 'Node.js', 'Java', 'C++']
+    },
+    {
+        name: 'Mobile',
+        skills: ['Swift', 'iOS', 'Xcode', 'Firebase']
+    },
+    {
+        name: 'Cloud & Data',
+        skills: ['AWS DynamoDB', 'AWS S3', 'AWS App Runner', 'SQL', 'Firebase Firestore']
+    },
+    {
+        name: 'Design & Tools',
+        skills: ['Figma', 'InVision Studio', 'Unity', 'Git', 'GitHub', 'Agile']
+    }
+]
 
 const About = () => {
-
     const [letterClass, setLetterClass] = useState('text-animate')
 
     useEffect(() => {
-        setTimeout(() => {
-           return setLetterClass('text-animate-hover')
+        const timer = setTimeout(() => {
+            setLetterClass('text-animate-hover')
         }, 3000)
-    })
+        return () => clearTimeout(timer)
+    }, [])
 
     return (
         <>
             <div className='about-page'>
-                <div className='text-zone'>
-                    <h1>
-                        <AnimatedLetters 
-                            letterClass={letterClass}
-                            strArray={['A', 'b', 'o', 'u', 't', ' ', 'm','e']} 
-                            idx={15}/>
-                    </h1>
-                    <p>
+                <div className='about-header'>
+                    <div className='text-zone'>
+                        <h1>
+                            <AnimatedLetters
+                                letterClass={letterClass}
+                                strArray={['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']}
+                                idx={15} />
+                        </h1>
+                        <p>
+                            I'm a full-stack software engineer and educator passionate about building impactful technology and inspiring the next generation of innovators. I graduated from California State University, Long Beach with a Bachelor of Engineering in Computer Science in May 2024.
+                        </p>
+                        <p>
+                            Currently serving as an Innovation Educator I at The Hidden Genius Project, I design transformative learning experiences in technology, entrepreneurship, and personal development for young Black males — developing 75+ hours of original curriculum across Game Development, Web Development, UI/UX Design, and Life Skills for 150+ students.
+                        </p>
+                        <p>
+                            Beyond teaching, I lead full-stack development of Genius Hub (Flask, AWS) and YE Maps (React, AWS) — internal tools that extend the organization's reach and impact. I thrive at the intersection of technical depth and user-centered design.
+                        </p>
+                    </div>
 
-I am a dedicated Computer Science undergraduate student at California State University, Long Beach, driven by a passion for technology and innovation. My journey into the world of computing began during my sophomore year of high school when I participated in the prestigious Hidden Genius project. This transformative experience not only equipped me with essential skills in entrepreneurship and leadership but also laid the foundation for my technical expertise.
-
-During my time with the Hidden Genius project, I immersed myself in various programming languages including Python, HTML, CSS, SQL, Swift, javascript, and C. Through hands-on projects and mentorship, I honed my abilities in software development, web design, and database management. Beyond technical proficiency, the program instilled in me a profound understanding of teamwork, problem-solving, and effective communication.
-
-Recognizing my potential and dedication, I was offered the unique opportunity to serve as an Educator within the Hidden Genius community. In this role, I mentored and inspired future generations of innovators and leaders, ranging from ages 8 to 16. By sharing my knowledge and experiences, I empowered young minds to explore their creativity, develop critical thinking skills, and pursue their passions in technology.
-
-My journey from student to educator exemplifies my commitment to continuous learning, personal growth, and making a positive impact in the tech community. As I continue my academic and professional pursuits in Computer Science, I am excited to leverage my diverse experiences and skills to contribute meaningfully to the ever-evolving field of technology.
-                    </p>
+                    <div className='stage-cube-cont'>
+                        <div className='cubespinner'>
+                            <div className='face1'>
+                                <FontAwesomeIcon icon={faReact} color='#61DBFB' />
+                            </div>
+                            <div className='face2'>
+                                <FontAwesomeIcon icon={faHtml5} color='#F06529' />
+                            </div>
+                            <div className='face3'>
+                                <FontAwesomeIcon icon={faCss3} color='#28A4D9' />
+                            </div>
+                            <div className='face4'>
+                                <FontAwesomeIcon icon={faPython} color='#3776AB' />
+                            </div>
+                            <div className='face5'>
+                                <FontAwesomeIcon icon={faNodeJs} color='#68A063' />
+                            </div>
+                            <div className='face6'>
+                                <FontAwesomeIcon icon={faGithub} color='#ffffff' />
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div className='stage-cube-cont'>
-                    <div className='cubespinner'>
-                        <div className='face1'>
-                            <FontAwesomeIcon icon={faDatabase} color='#DD0031' />
-                        </div>
-                        <div className='face2'>
-                            <FontAwesomeIcon icon={faHtml5} color='#F06529' />
-                        </div>
-                        <div className='face3'>
-                            <FontAwesomeIcon icon={faCss3} color='#28A4D9' />
-                        </div>
-                        <div className='face4'>
-                            <FontAwesomeIcon icon={faReact} color='#5ED4F4' />
-                        </div>
-                        <div className='face5'>
-                            <FontAwesomeIcon icon={faJava} color='#EFD81D' />
-                        </div>
-                        <div className='face6'>
-                            <FontAwesomeIcon icon={faGithub} color='#EC4D28' />
-                        </div>
+                <div className='skills-section'>
+                    <h2 className='skills-title'>Technical Skills</h2>
+                    <div className='skills-grid'>
+                        {skillCategories.map((cat, i) => (
+                            <div key={i} className='skill-category'>
+                                <h3>{cat.name}</h3>
+                                <div className='skill-tags'>
+                                    {cat.skills.map((skill, j) => (
+                                        <span key={j} className='skill-tag'>{skill}</span>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
