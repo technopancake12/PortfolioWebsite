@@ -20,6 +20,7 @@ const PROJECTS = [
     description:
       'A full-stack platform I built end-to-end — Flask backend on AWS App Runner, DynamoDB for metadata, S3 for game builds. Students upload Unity WebGL projects through a guided flow and get a shareable link, instructor review queue included. Fully shipped and running; awaiting org legal review before public launch.',
     youtubeId: null,
+    videoFile: '/videos/IEShowcase.mp4',
     github: null,
   },
   {
@@ -480,7 +481,17 @@ function ProjectRow({ p, expanded, onToggle }) {
           }}
         >
           <div className="pe-media" style={{ background: p.color }}>
-            {p.youtubeId ? (
+            {p.videoFile ? (
+              <video
+                className="pe-video"
+                src={p.videoFile}
+                autoPlay
+                muted
+                loop
+                playsInline
+                controls
+              />
+            ) : p.youtubeId ? (
               <YouTubeFacade videoId={p.youtubeId} title={p.name} />
             ) : (
               <div className="pe-media-placeholder">

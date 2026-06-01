@@ -25,7 +25,8 @@
       "WebFetch(domain:dribbble.com)",
       "WebFetch(domain:api.anthropic.com)",
       "Bash(ls -la \"/c/Users/Ian Bundy-Weiss/.claude/projects/C--Users-Ian-Bundy-Weiss-Documents-Github-PortfolioWebsite/7bd1c1c4-f9f1-4fe1-bf18-3c8255face75/tool-results/\")",
-      "mcp__Claude_in_Chrome__javascript_tool"
+      "mcp__Claude_in_Chrome__javascript_tool",
+      "Bash(mkdir -p \"C:\\\\Users\\\\Ian Bundy-Weiss\\\\Documents\\\\Github\\\\PortfolioWebsite\\\\public\\\\videos\" && cp \"C:\\\\Users\\\\Ian Bundy-Weiss\\\\Downloads\\\\IEShowcase.mp4\" \"C:\\\\Users\\\\Ian Bundy-Weiss\\\\Documents\\\\Github\\\\PortfolioWebsite\\\\public\\\\videos\\\\IEShowcase.mp4\" && echo \"done\")"
     ]
   }
 }
