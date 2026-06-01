@@ -21,7 +21,7 @@ const PROJECTS = [
       'A full-stack platform I built end-to-end — Flask backend on AWS App Runner, DynamoDB for metadata, S3 for game builds. Students upload Unity WebGL projects through a guided flow and get a shareable link, instructor review queue included. Fully shipped and running; awaiting org legal review before public launch.',
     youtubeId: null,
     videoFile: '/videos/IEShowcase.mp4',
-    github: null,
+    github: 'https://github.com/The-Hidden-Genius-Project/GeniusHub',
   },
   {
     id: '02',
@@ -36,7 +36,7 @@ const PROJECTS = [
     description:
       'React + TypeScript front end with an AWS-backed Node service. Two views: educator-facing search for open teaching positions, and a staff dashboard tracking educator hours, sites covered, and skills delivered across the program. Replaces a spreadsheet that was the single source of truth for ~30 people.',
     youtubeId: null,
-    github: null,
+    github: 'https://github.com/technopancake12/YEMaps',
   },
   {
     id: '03',
